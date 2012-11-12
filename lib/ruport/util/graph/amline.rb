@@ -101,11 +101,7 @@ class Amline
     
   class UnknownOption < StandardError; end
 
-  class BlankSlate
-    instance_methods.each { |m| undef_method m unless m =~ /^__/ }
-  end
-
-  class HpricotTraverser < BlankSlate
+  class HpricotTraverser < BasicObject
 
 
     def initialize(some_root)
